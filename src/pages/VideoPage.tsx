@@ -20,7 +20,7 @@ function Video({ youtubeId, title, message }: { youtubeId: string; title?: strin
       <div className="video-wrap">
         <iframe
           src={src}
-          title={title ?? 'Vídeo sorpresa'}
+          title={title ?? 'Surprise video'}
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
           allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"

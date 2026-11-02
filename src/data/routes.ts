@@ -13,18 +13,18 @@ export const routes: VideoRoute[] = [
   {
     code: '3F4A67G',
     youtubeId: 'dQw4w9WgXcQ',
-    title: 'Sorpresa nº 1 🎁',
-    message: 'Con todo mi cariño, para ti.',
+    title: 'Surprise #1 🎁',
+    message: 'With all my love, just for you.',
   },
   {
     code: '9K2M81X',
     youtubeId: 'jNQXAC9IVRw',
-    title: 'Sorpresa nº 2 🎈',
+    title: 'Surprise #2 🎈',
   },
   {
     code: 'P7Q4T2Z',
     youtubeId: '9bZkp7q19f0',
-    message: '¡Que cumplas muchísimos más! 🥳',
+    message: "Here's to many, many more! 🥳",
   },
 ]
 

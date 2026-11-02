@@ -7,8 +7,8 @@ export default function Home() {
     <section className="card center">
       <div className="emoji bounce">🎂</div>
       <Title />
-      <p className="lead">Tienes una sorpresa esperándote.</p>
-      <p className="hint">Acerca el móvil a la etiqueta mágica ✨</p>
+      <p className="lead">A surprise is waiting for you.</p>
+      <p className="hint">Hold your phone near the magic tag ✨</p>
     </section>
   )
 }
