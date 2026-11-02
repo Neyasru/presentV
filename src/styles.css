@@ -114,3 +114,83 @@ body {
   .balloon, .bounce { animation: none; }
   .balloon { bottom: auto; top: 12%; }
 }
+
+/* ---------- Minijuegos ---------- */
+.game { margin-top: 8px; text-align: center; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
+.game-hint { font-size: 19px; font-weight: 700; margin: 6px 0 14px; }
+.grid { display: grid; gap: 10px; }
+.grid-tight { gap: 4px; }
+.tile {
+  aspect-ratio: 1;
+  min-height: 64px;
+  border: 0;
+  border-radius: 18px;
+  background: #e9defa;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 34px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 4px 0 rgba(59, 28, 90, 0.2);
+  transition: transform 0.12s, opacity 0.2s, background 0.2s;
+}
+.tile:active { transform: scale(0.94); }
+.tile-on { background: #fff; }
+.tile-empty { background: transparent; box-shadow: none; cursor: default; }
+.tile-small { font-size: 28px; min-height: 0; border-radius: 12px; background: #fff; }
+
+.balloon-field { position: relative; height: 340px; }
+.pop-balloon {
+  position: absolute;
+  width: 72px; height: 86px;
+  border: 0;
+  border-radius: 50% 50% 48% 48%;
+  cursor: pointer;
+  animation: bob 3s ease-in-out infinite;
+}
+.pop-balloon:active { transform: scale(0.85); }
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.slots { display: flex; justify-content: center; gap: 4px; margin-bottom: 14px; }
+.slot {
+  width: 9.5%; max-width: 38px; aspect-ratio: 1;
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 3px solid var(--pink);
+  font-size: 24px; font-weight: 800;
+}
+
+.candles { display: flex; justify-content: center; gap: 14px; margin: 8px 0; }
+.candle { display: flex; flex-direction: column; align-items: center; }
+.flame { font-size: 30px; line-height: 1; }
+.stick { width: 12px; height: 56px; border-radius: 4px; background: repeating-linear-gradient(45deg, var(--pink) 0 8px, #fff 8px 16px); }
+.meter { height: 14px; border-radius: 999px; background: #e9defa; overflow: hidden; margin: 14px 0 4px; }
+.meter-fill { height: 100%; background: var(--blue); transition: width 0.05s linear; }
+.blow { width: 100%; border: 0; font-family: inherit; touch-action: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pop-balloon { animation: none; }
+}
+
+.gift-field { position: relative; height: 340px; overflow: hidden; border-radius: 18px; background: rgba(255, 255, 255, 0.5); }
+.gift {
+  position: absolute;
+  top: -60px;
+  width: 64px; height: 64px;
+  border: 0; background: transparent;
+  font-size: 44px; line-height: 1;
+  cursor: pointer;
+  animation: fall 3.6s linear forwards;
+}
+@keyframes fall { to { transform: translateY(420px) rotate(20deg); } }
+
+.versus { display: flex; align-items: center; justify-content: center; gap: 18px; font-size: 56px; line-height: 1.2; }
+.vs { font-size: 20px; font-weight: 800; }
+
+@media (prefers-reduced-motion: reduce) {
+  .gift { top: 40%; animation: fade 3.6s linear forwards; }
+}
+@keyframes fade { to { opacity: 0; } }
